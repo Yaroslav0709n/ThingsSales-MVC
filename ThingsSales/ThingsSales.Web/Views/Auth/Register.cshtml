@@ -18,51 +18,50 @@
         <div class="row justify-content-center mx-auto">
             <div class="col-md-4 mx-auto">
                 <div class="card mt-5">
-                    <div class="card-body ">
+                    <div class="card-body">
                         <h2 class="text-center">Registration</h2>
-                        @using (Html.BeginForm("Register", "Auth", FormMethod.Post, new { @class = "needs-validation", novalidate = "true" }))
-                        {
+                        <form asp-action="Register" asp-controller="Auth" method="post" class="needs-validation" novalidate="true">
                             @Html.AntiForgeryToken()
 
                             <div class="form-group">
-                                @Html.LabelFor(model => model.FirstName)
-                                @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", required = "true" })
-                                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                                <label asp-for="FirstName">First Name</label>
+                                <input asp-for="FirstName" class="form-control" required="true" />
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
                             </div>
 
                             <div class="form-group">
-                                @Html.LabelFor(model => model.LastName)
-                                @Html.TextBoxFor(model => model.LastName, new { @class = "form-control", required = "true" })
-                                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                                <label asp-for="LastName">Last Name</label>
+                                <input asp-for="LastName" class="form-control" required="true" />
+                                <span asp-validation-for="LastName" class="text-danger"></span>
                             </div>
 
                             <div class="form-group">
-                                @Html.LabelFor(model => model.Email)
-                                @Html.TextBoxFor(model => model.Email, new { @class = "form-control", required = "true", type = "email" })
-                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                <label asp-for="Email">Email</label>
+                                <input asp-for="Email" class="form-control" required="true" type="email" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
                             </div>
 
                             <div class="form-group">
-                                @Html.LabelFor(model => model.PhoneNumber)
-                                @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control", required = "true" })
-                                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+                                <label asp-for="PhoneNumber">Phone Number</label>
+                                <input asp-for="PhoneNumber" class="form-control" required="true" />
+                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                             </div>
 
                             <div class="form-group">
-                                @Html.LabelFor(model => model.City)
-                                @Html.TextBoxFor(model => model.City, new { @class = "form-control", required = "true" })
-                                @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                                <label asp-for="City">City</label>
+                                <input asp-for="City" class="form-control" required="true" />
+                                <span asp-validation-for="City" class="text-danger"></span>
                             </div>
 
                             <div class="form-group">
-                                @Html.LabelFor(model => model.Password)
-                                @Html.PasswordFor(model => model.Password, new { @class = "form-control", required = "true" })
-                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                <label asp-for="Password">Password</label>
+                                <input asp-for="Password" class="form-control" required="true" type="password" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
                             </div>
 
                             <button type="submit" class="btn btn-primary mt-2">Registration</button>
-                            <p class="text-center"><a class="fs-15" href="/Auth/Login">I have an account</a></p>
-                        }
+                        </form>
+                        <p class="text-center"><a class="fs-15" href="/Auth/Login">I have an account</a></p>
                     </div>
                 </div>
             </div>
