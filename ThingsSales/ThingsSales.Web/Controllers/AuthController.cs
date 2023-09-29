@@ -21,9 +21,14 @@ namespace ThingsSales.Web.Controllers
         [HttpPost]
         public async Task<ActionResult> Register(Register register)
         {
-            var userEmailExist = await _userManager.FindByEmailAsync(register.Email);
-            if (userEmailExist != null)
+            if (!string.IsNullOrEmpty(register.Email))
+            {
+                var userEmailExist = await _userManager.FindByEmailAsync(register.Email);
+            }
+            else
                 return BadRequest("Email is taken");
+
+
 
             ApplicationUser user = new ApplicationUser()
             {
@@ -35,15 +40,19 @@ namespace ThingsSales.Web.Controllers
                 City = register.City,
             };
 
-            var result = await _userManager.CreateAsync(user, register.Password);
-            if (!result.Succeeded)
+            if (!string.IsNullOrEmpty(register.Email))
             {
-                foreach (var error in result.Errors)
+                var result = await _userManager.CreateAsync(user, register.Password);
+                if (!result.Succeeded)
                 {
-                    ModelState.AddModelError("", error.Description);
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
+                    }
+                    return BadRequest(ModelState);
                 }
-                return BadRequest(ModelState);
             }
+
             return RedirectToAction("Login");
         }
 
@@ -53,20 +62,22 @@ namespace ThingsSales.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Login(Login loginDto)
+        public async Task<ActionResult> Login(Login login)
         {
-            var user = await _userManager.FindByEmailAsync(loginDto.Email);
+            if (string.IsNullOrWhiteSpace(login.Email))
+                return BadRequest(new ErrorResponse { Error = "Email is required" });
+            
+            if (string.IsNullOrEmpty(login.Password))
+                return BadRequest(new ErrorResponse { Error = "Password is required" });
+            
+            var user = await _userManager.FindByEmailAsync(login.Email);
             if (user == null)
-            {
                 return BadRequest(new ErrorResponse { Error = "Invalid email" });
-            }
 
-            if (!await _userManager.CheckPasswordAsync(user, loginDto.Password))
-            {
+            if (!await _userManager.CheckPasswordAsync(user, login.Password))
                 return BadRequest(new ErrorResponse { Error = "Invalid password" });
-            }
 
-            return RedirectToAction("Login", "Auth");
+            return View(login);
         }
     }
 }
