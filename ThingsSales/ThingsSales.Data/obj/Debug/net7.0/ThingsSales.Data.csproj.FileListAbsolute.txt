@@ -1,0 +1,15 @@
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Data\bin\Debug\net7.0\ThingsSales.Data.deps.json
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Data\bin\Debug\net7.0\ThingsSales.Data.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Data\bin\Debug\net7.0\ThingsSales.Data.pdb
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Data\bin\Debug\net7.0\ThingsSales.Model.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Data\bin\Debug\net7.0\ThingsSales.Model.pdb
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Data\obj\Debug\net7.0\ThingsSales.Data.csproj.AssemblyReference.cache
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Data\obj\Debug\net7.0\ThingsSales.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Data\obj\Debug\net7.0\ThingsSales.Data.AssemblyInfoInputs.cache
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Data\obj\Debug\net7.0\ThingsSales.Data.AssemblyInfo.cs
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Data\obj\Debug\net7.0\ThingsSales.Data.csproj.CoreCompileInputs.cache
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Data\obj\Debug\net7.0\ThingsSales.Data.csproj.CopyComplete
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Data\obj\Debug\net7.0\ThingsSales.Data.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Data\obj\Debug\net7.0\refint\ThingsSales.Data.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Data\obj\Debug\net7.0\ThingsSales.Data.pdb
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Data\obj\Debug\net7.0\ref\ThingsSales.Data.dll

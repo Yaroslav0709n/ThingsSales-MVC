@@ -1,0 +1,14 @@
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Model\bin\Debug\net7.0\ThingsSales.Model.deps.json
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Model\bin\Debug\net7.0\ThingsSales.Model.runtimeconfig.json
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Model\bin\Debug\net7.0\ThingsSales.Model.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Model\bin\Debug\net7.0\ThingsSales.Model.pdb
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Model\obj\Debug\net7.0\ThingsSales.Model.csproj.AssemblyReference.cache
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Model\obj\Debug\net7.0\ThingsSales.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Model\obj\Debug\net7.0\ThingsSales.Model.AssemblyInfoInputs.cache
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Model\obj\Debug\net7.0\ThingsSales.Model.AssemblyInfo.cs
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Model\obj\Debug\net7.0\ThingsSales.Model.csproj.CoreCompileInputs.cache
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Model\obj\Debug\net7.0\ThingsSales.Model.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Model\obj\Debug\net7.0\refint\ThingsSales.Model.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Model\obj\Debug\net7.0\ThingsSales.Model.pdb
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Model\obj\Debug\net7.0\ThingsSales.Model.genruntimeconfig.cache
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Model\obj\Debug\net7.0\ref\ThingsSales.Model.dll
