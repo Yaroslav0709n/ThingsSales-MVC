@@ -14,4 +14,8 @@
     <ProjectReference Include="..\ThingsSales.Model\ThingsSales.Model.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\IRepository\" />
+  </ItemGroup>
+
 </Project>

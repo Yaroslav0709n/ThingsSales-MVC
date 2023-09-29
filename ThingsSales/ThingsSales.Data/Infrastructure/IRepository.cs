@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ThingsSales.Data.Infrastructure
 {
-    internal class IRepository
+    public interface IRepository<T> where T : class
     {
     }
 }

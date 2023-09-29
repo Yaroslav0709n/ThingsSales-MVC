@@ -1,29 +1,49 @@
 ﻿@model ThingsSales.Model.Auth.Login
 
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <h2 class="text-center">Authorization</h2>
-            @using (Html.BeginForm("Login", "Auth", FormMethod.Post))
-            {
-                @Html.AntiForgeryToken()
+@{
+    Layout = null;
+}
 
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Email)
-                    @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.Email)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ThingsSales.Web</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ThingsSales.Web.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container_auth">
+        <div class="row justify-content-center mx-auto">
+            <div class="col-md-4 mx-auto">
+                <div class="card mt-5">
+                    <div class="card-body ">
+                        <h2 class="card-title text-center">Authorization</h2>
+                        @using (Html.BeginForm("Login", "Auth", FormMethod.Post, new { @class = "needs-validation", novalidate = "true" }))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Email)
+                                @Html.TextBoxFor(model => model.Email, new { @class = "form-control", required = "required" })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Password)
+                                @Html.PasswordFor(model => model.Password, new { @class = "form-control", required = "required" })
+                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block mt-3">Authorize</button>
+                        }
+                        <p class="text-center mt-3">Don't have an account? <a href="/Auth/Register">Register here</a></p>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Password)
-                    @Html.TextBoxFor(model => model.Password, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.Password)
-                </div>
-
-                <button type="submit" class="btn btn-primary mt-2">Authorization</button>
-                <p class="text-center"><a class="fs-15" href="/Auth/Register">Don't have an account?</a></p>
-
-            }
+            </div>
         </div>
     </div>
-</div>
+</body>
+</html>
