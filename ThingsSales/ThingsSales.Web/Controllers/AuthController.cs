@@ -77,7 +77,7 @@ namespace ThingsSales.Web.Controllers
             if (!await _userManager.CheckPasswordAsync(user, login.Password))
                 return BadRequest(new ErrorResponse { Error = "Invalid password" });
 
-            return View(login);
+            return RedirectToAction("Things", "Things");
         }
     }
 }
