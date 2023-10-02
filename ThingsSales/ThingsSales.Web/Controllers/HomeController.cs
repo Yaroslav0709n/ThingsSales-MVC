@@ -1,23 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using ThingsSales.Data.Common;
-using ThingsSales.Data.ContextData;
+using ThingsSales.Service.IService;
 
 namespace ThingsSales.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IUserService _userService;
 
-        public HomeController(ApplicationDbContext context)
+        public HomeController(IUserService userService)
         {
-            _context = context;
+            _userService = userService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             string userId = HttpContext.Session.GetString("UserId");
-            var user = _context.ApplicationUsers.FirstOrDefault(u => u.Id == userId.ToString());
+            var user = await _userService.GetUserFullNameById(userId);
 
             if (user != null)
             {

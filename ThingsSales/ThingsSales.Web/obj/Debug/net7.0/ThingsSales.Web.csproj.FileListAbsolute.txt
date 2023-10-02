@@ -79,3 +79,7 @@ D:\vs2\ThingsSales\ThingsSales\ThingsSales.Web\obj\Debug\net7.0\ThingsSales.Web.
 D:\vs2\ThingsSales\ThingsSales\ThingsSales.Web\obj\Debug\net7.0\ThingsSales.Web.genruntimeconfig.cache
 D:\vs2\ThingsSales\ThingsSales\ThingsSales.Web\obj\Debug\net7.0\ref\ThingsSales.Web.dll
 D:\vs2\ThingsSales\ThingsSales\ThingsSales.Web\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Web\bin\Debug\net7.0\ThingsSales.Service.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Web\bin\Debug\net7.0\ThingsSales.Service.pdb
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Web\bin\Debug\net7.0\AutoMapper.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Web\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

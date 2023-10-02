@@ -10,4 +10,13 @@
     <Folder Include="IService\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ThingsSales.Data\ThingsSales.Data.csproj" />
+    <ProjectReference Include="..\ThingsSales.Model\ThingsSales.Model.csproj" />
+  </ItemGroup>
+
 </Project>

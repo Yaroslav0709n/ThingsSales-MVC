@@ -1,0 +1,17 @@
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Service\obj\Debug\net7.0\ThingsSales.Service.csproj.AssemblyReference.cache
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Service\obj\Debug\net7.0\ThingsSales.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Service\obj\Debug\net7.0\ThingsSales.Service.AssemblyInfoInputs.cache
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Service\obj\Debug\net7.0\ThingsSales.Service.AssemblyInfo.cs
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Service\obj\Debug\net7.0\ThingsSales.Service.csproj.CoreCompileInputs.cache
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Service\bin\Debug\net7.0\ThingsSales.Service.deps.json
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Service\bin\Debug\net7.0\ThingsSales.Service.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Service\bin\Debug\net7.0\ThingsSales.Service.pdb
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Service\bin\Debug\net7.0\ThingsSales.Data.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Service\bin\Debug\net7.0\ThingsSales.Model.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Service\bin\Debug\net7.0\ThingsSales.Data.pdb
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Service\bin\Debug\net7.0\ThingsSales.Model.pdb
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Service\obj\Debug\net7.0\ThingsSales.Service.csproj.CopyComplete
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Service\obj\Debug\net7.0\ThingsSales.Service.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Service\obj\Debug\net7.0\refint\ThingsSales.Service.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Service\obj\Debug\net7.0\ThingsSales.Service.pdb
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Service\obj\Debug\net7.0\ref\ThingsSales.Service.dll

@@ -85,11 +85,6 @@ namespace ThingsSales.Web.Controllers
             if (user != null)
             {
                 HttpContext.Session.SetString("UserId", user.Id);
-                string userId = HttpContext.Session.GetString("UserId");
-                var userFullName = await _context.ApplicationUsers.FirstOrDefaultAsync(u => u.Id == userId.ToString());
-                ViewData["UserFullName"] = userFullName.FirstName + " " + userFullName.LastName;
-
-
             }
 
             return RedirectToAction("Index", "Things");
