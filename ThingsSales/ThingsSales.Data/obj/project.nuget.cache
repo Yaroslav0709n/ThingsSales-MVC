@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+M+oGK83cyLApA9yx5ZwiaKgVvhKc197OdEh9ziurSJkcsoeWrdv6SxAhW5acg7ypZRbJbwQkmiFnBQ4E/lnbQ==",
+  "dgSpecHash": "G++0co3grIedjVirm8XyWzM1oBHB+HLRj9kdnzMD2C0wgTmnREmiaQa4y8Qjn76M8Sdo5gEjJTvrnSduWlUBww==",
   "success": true,
   "projectFilePath": "D:\\vs2\\ThingsSales\\ThingsSales\\ThingsSales.Data\\ThingsSales.Data.csproj",
   "expectedPackageFiles": [
@@ -21,7 +21,12 @@
     "C:\\Users\\Ярослав\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
     "C:\\Users\\Ярослав\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Ярослав\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
-    "C:\\Users\\Ярослав\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+    "C:\\Users\\Ярослав\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\Ярослав\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.0.0\\microsoft.identitymodel.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Ярослав\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\7.0.0\\microsoft.identitymodel.jsonwebtokens.7.0.0.nupkg.sha512",
+    "C:\\Users\\Ярослав\\.nuget\\packages\\microsoft.identitymodel.logging\\7.0.0\\microsoft.identitymodel.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\Ярослав\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.0.0\\microsoft.identitymodel.tokens.7.0.0.nupkg.sha512",
+    "C:\\Users\\Ярослав\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.0.0\\system.identitymodel.tokens.jwt.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
