@@ -1,17 +1,24 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ThingsSales.Data.Common.Exception;
+using ThingsSales.Data.ContextData;
+using ThingsSales.Data.Repositories.IRepository;
 using ThingsSales.Model.Auth;
 using ThingsSales.Model.Identity;
+using ThingsSales.Web.ViewModels;
 
 namespace ThingsSales.Web.Controllers
 {
     public class AuthController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
-        public AuthController(UserManager<ApplicationUser> userManager)
+        private readonly ApplicationDbContext _context;
+
+        public AuthController(UserManager<ApplicationUser> userManager, ApplicationDbContext context)
         {
             _userManager = userManager;
+            _context = context;
         }
         public ActionResult Register()
         {
@@ -23,12 +30,10 @@ namespace ThingsSales.Web.Controllers
         {
             if (!string.IsNullOrEmpty(register.Email))
             {
-                var userEmailExist = await _userManager.FindByEmailAsync(register.Email);
+                await _userManager.FindByEmailAsync(register.Email);
             }
             else
                 return BadRequest("Email is taken");
-
-
 
             ApplicationUser user = new ApplicationUser()
             {
@@ -77,7 +82,17 @@ namespace ThingsSales.Web.Controllers
             if (!await _userManager.CheckPasswordAsync(user, login.Password))
                 return BadRequest(new ErrorResponse { Error = "Invalid password" });
 
-            return RedirectToAction("Things", "Things");
+            if (user != null)
+            {
+                HttpContext.Session.SetString("UserId", user.Id);
+                string userId = HttpContext.Session.GetString("UserId");
+                var userFullName = await _context.ApplicationUsers.FirstOrDefaultAsync(u => u.Id == userId.ToString());
+                ViewData["UserFullName"] = userFullName.FirstName + " " + userFullName.LastName;
+
+
+            }
+
+            return RedirectToAction("Index", "Things");
         }
     }
 }

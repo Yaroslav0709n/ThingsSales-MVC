@@ -10,9 +10,9 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("MSSQL"), b => b.MigrationsAssembly("ThingsSales.Web")));
 
 builder.Services.AddIdentityService();
-
 builder.Services.AddDataAccess();
-
+builder.Services.AddApplicationService();
+builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -29,7 +29,10 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
