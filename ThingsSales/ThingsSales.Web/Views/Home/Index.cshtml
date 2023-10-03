@@ -1,6 +1,8 @@
-﻿@model string
+﻿@model ThingsSales.Service.ViewModels.AuthUserViewModel;
 
 
 <div>
-    <p>@Model</p>
+    <p>@Model.FirstName @Model.LastName</p>
+    <a href="@Url.Action("Create", "Item")" class="btn btn-primary">Add new item</a>
+
 </div>

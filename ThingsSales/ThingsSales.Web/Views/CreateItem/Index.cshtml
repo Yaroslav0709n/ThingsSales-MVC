@@ -1,0 +1,25 @@
+﻿<div>
+    <form method="post" class="create-form" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="Name mt-3">Title:</label>
+            <input type="text" class="form-control " id="Name" name="Name" placeholder="Введите имя" required>
+        </div>
+
+        <div class="form-group mt-3">
+            <label for="Description">Description:</label>
+            <textarea class="form-control " id="Description" name="Description" placeholder="Введите описание" required></textarea>
+        </div>
+
+        <div class="form-group mt-3">
+            <label for="Price">Price:</label>
+            <input type="number" class="form-control " id="Price" name="Price" placeholder="Введите цену" required>
+        </div>
+
+        <div class="form-group mt-3">
+            <label for="Photo">Photo:</label>
+            <input type="file" class="form-control-file" id="Photo" name="Photo" accept="image/*" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-4">Add good</button>
+    </form>
+</div>
