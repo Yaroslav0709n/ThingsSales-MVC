@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ThingsSales.Data.ValidationExtensions;
 using ThingsSales.Service.IService;
 
 namespace ThingsSales.Web.Controllers
@@ -15,15 +16,12 @@ namespace ThingsSales.Web.Controllers
         public async Task<IActionResult> Index()
         {
             string userId = HttpContext.Session.GetString("UserId");
-            var user = await _userService.GetUserFullNameById(userId);
 
-            if (user != null)
-            {
-                string fullName = $"{user.FirstName} {user.LastName}";
-                return View(model: fullName);
-            }
+            var user = await _userService.GetUserById(userId);
 
-            return NotFound();
+            user.ThrowIfNull(nameof(user));
+
+            return View(user);
         }
 
     }

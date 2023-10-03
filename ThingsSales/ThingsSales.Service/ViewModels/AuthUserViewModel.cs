@@ -1,4 +1,4 @@
-﻿namespace ThingsSales.Web.ViewModels
+﻿namespace ThingsSales.Service.ViewModels
 {
     public class AuthUserViewModel
     {

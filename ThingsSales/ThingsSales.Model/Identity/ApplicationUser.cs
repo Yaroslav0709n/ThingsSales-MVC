@@ -10,5 +10,7 @@ namespace ThingsSales.Model.Identity
         [Required]
         public string LastName { get; set; }
         public string? City { get; set; }
+
+        public ICollection<Item> Items { get; set; }
     }
 }

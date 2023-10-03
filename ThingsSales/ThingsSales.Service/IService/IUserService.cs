@@ -1,10 +1,9 @@
-﻿using ThingsSales.Model.Identity;
-using ThingsSales.Web.ViewModels;
+﻿using ThingsSales.Service.ViewModels;
 
 namespace ThingsSales.Service.IService
 {
     public interface IUserService
     {
-        Task<AuthUserViewModel> GetUserFullNameById(string userId);
+        Task<AuthUserViewModel> GetUserById(string userId);
     }
 }

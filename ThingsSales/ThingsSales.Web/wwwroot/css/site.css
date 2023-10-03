@@ -16,11 +16,28 @@ html {
   position: relative;
   min-height: 100%;
 }
-header{
-    font-size:20px;
+
+header {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+nav {
+    height: 100px;
+    font-size: 26px;
+    background-color: #AD5FCA;
+}
+
+.nav-item{
+    margin-right: 50px;
+}
+
+.title {
+    font-size: 26px;
 }
 
 body {
+    background-color: #DFBFBF;
 }
 
 .container_auth {
@@ -30,4 +47,8 @@ body {
 
 .card{
     border-radius: 15px;
+}
+
+.create-form{
+    
 }

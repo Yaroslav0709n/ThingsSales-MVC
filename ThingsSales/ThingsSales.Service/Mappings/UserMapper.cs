@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using ThingsSales.Model.Identity;
-using ThingsSales.Web.ViewModels;
+using ThingsSales.Service.ViewModels;
 
 namespace ThingsSales.Service.Mappings
 {

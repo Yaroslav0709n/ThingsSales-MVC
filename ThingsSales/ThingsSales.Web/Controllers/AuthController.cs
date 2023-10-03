@@ -1,12 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using ThingsSales.Data.Common.Exception;
 using ThingsSales.Data.ContextData;
-using ThingsSales.Data.Repositories.IRepository;
 using ThingsSales.Model.Auth;
 using ThingsSales.Model.Identity;
-using ThingsSales.Web.ViewModels;
 
 namespace ThingsSales.Web.Controllers
 {
@@ -85,6 +82,7 @@ namespace ThingsSales.Web.Controllers
             if (user != null)
             {
                 HttpContext.Session.SetString("UserId", user.Id);
+                HttpContext.Session.SetString("UserFullName", $"{user.FirstName} {user.LastName}");
             }
 
             return RedirectToAction("Index", "Things");

@@ -1,9 +1,7 @@
 ﻿using AutoMapper;
-using System.Text;
 using ThingsSales.Data.Repositories.IRepository;
-using ThingsSales.Model.Identity;
 using ThingsSales.Service.IService;
-using ThingsSales.Web.ViewModels;
+using ThingsSales.Service.ViewModels;
 
 namespace ThingsSales.Service
 {
@@ -18,7 +16,7 @@ namespace ThingsSales.Service
             _userRepository = userRepository;
             _mapper = mapper;
         }
-        public async Task<AuthUserViewModel> GetUserFullNameById(string userId)
+        public async Task<AuthUserViewModel> GetUserById(string userId)
         {
             var user = await _userRepository.GetById(userId);
 
