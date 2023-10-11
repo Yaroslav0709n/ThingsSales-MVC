@@ -83,3 +83,10 @@ D:\vs2\ThingsSales\ThingsSales\ThingsSales.Web\bin\Debug\net7.0\ThingsSales.Serv
 D:\vs2\ThingsSales\ThingsSales\ThingsSales.Web\bin\Debug\net7.0\ThingsSales.Service.pdb
 D:\vs2\ThingsSales\ThingsSales\ThingsSales.Web\bin\Debug\net7.0\AutoMapper.dll
 D:\vs2\ThingsSales\ThingsSales\ThingsSales.Web\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Web\bin\Debug\net7.0\System.Web.Mvc.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Web\bin\Debug\net7.0\System.Web.Razor.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Web\bin\Debug\net7.0\System.Web.Helpers.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Web\bin\Debug\net7.0\System.Web.WebPages.Deployment.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Web\bin\Debug\net7.0\System.Web.WebPages.Razor.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Web\bin\Debug\net7.0\System.Web.WebPages.dll
+D:\vs2\ThingsSales\ThingsSales\ThingsSales.Web\bin\Debug\net7.0\Microsoft.Web.Infrastructure.dll

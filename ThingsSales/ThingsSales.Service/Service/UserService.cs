@@ -3,14 +3,14 @@ using ThingsSales.Data.Repositories.IRepository;
 using ThingsSales.Service.IService;
 using ThingsSales.Service.ViewModels;
 
-namespace ThingsSales.Service
+namespace ThingsSales.Service.Service
 {
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
 
-        public UserService(IUserRepository userRepository, 
+        public UserService(IUserRepository userRepository,
                            IMapper mapper)
         {
             _userRepository = userRepository;

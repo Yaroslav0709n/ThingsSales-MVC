@@ -1,7 +1,7 @@
 ﻿using ThingsSales.Data.Repositories;
 using ThingsSales.Data.Repositories.IRepository;
-using ThingsSales.Service;
 using ThingsSales.Service.IService;
+using ThingsSales.Service.Service;
 
 namespace ThingsSales.Web.Extension
 {
@@ -11,6 +11,8 @@ namespace ThingsSales.Web.Extension
         {
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IItemService, ItemService>();
+            services.AddScoped<IItemRepository, ItemRepository>();
 
             return services;
         }

@@ -240,6 +240,10 @@ namespace ThingsSales.Web.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
@@ -248,14 +252,6 @@ namespace ThingsSales.Web.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<byte[]>("PhotoData")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<string>("PhotoMimeType")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -270,6 +266,32 @@ namespace ThingsSales.Web.Migrations
                     b.HasIndex("ApplicationUserId");
 
                     b.ToTable("Items");
+                });
+
+            modelBuilder.Entity("ThingsSales.Model.Photo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Caption")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("ImageData")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<int>("ItemId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ItemId");
+
+                    b.ToTable("Photos");
                 });
 
             modelBuilder.Entity("ThingsSales.Model.Identity.ApplicationUser", b =>
@@ -350,6 +372,22 @@ namespace ThingsSales.Web.Migrations
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
+                });
+
+            modelBuilder.Entity("ThingsSales.Model.Photo", b =>
+                {
+                    b.HasOne("ThingsSales.Model.Item", "Item")
+                        .WithMany("Photos")
+                        .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Item");
+                });
+
+            modelBuilder.Entity("ThingsSales.Model.Item", b =>
+                {
+                    b.Navigation("Photos");
                 });
 
             modelBuilder.Entity("ThingsSales.Model.Identity.ApplicationUser", b =>
