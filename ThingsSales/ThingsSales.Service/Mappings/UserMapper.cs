@@ -10,8 +10,6 @@ namespace ThingsSales.Service.Mappings
         {
             CreateMap<AuthUserViewModel, ApplicationUser>();
             CreateMap<ApplicationUser, AuthUserViewModel>();
-
-
         }
     }
 }
