@@ -25,12 +25,11 @@ namespace ThingsSales.Web.Controllers
         [HttpPost]
         public async Task<ActionResult> Register(Register register)
         {
-            if (!string.IsNullOrEmpty(register.Email))
-            {
-                await _userManager.FindByEmailAsync(register.Email);
-            }
-            else
+            var userEmailExist = await _userManager.FindByEmailAsync(register.Email);
+
+            if (userEmailExist != null)
                 return BadRequest("Email is taken");
+
 
             ApplicationUser user = new ApplicationUser()
             {
@@ -42,17 +41,14 @@ namespace ThingsSales.Web.Controllers
                 City = register.City,
             };
 
-            if (!string.IsNullOrEmpty(register.Email))
+            var result = await _userManager.CreateAsync(user, register.Password);
+            if (!result.Succeeded)
             {
-                var result = await _userManager.CreateAsync(user, register.Password);
-                if (!result.Succeeded)
+                foreach (var error in result.Errors)
                 {
-                    foreach (var error in result.Errors)
-                    {
-                        ModelState.AddModelError("", error.Description);
-                    }
-                    return BadRequest(ModelState);
+                    ModelState.AddModelError("", error.Description);
                 }
+                return BadRequest(ModelState);
             }
 
             return RedirectToAction("Login");
