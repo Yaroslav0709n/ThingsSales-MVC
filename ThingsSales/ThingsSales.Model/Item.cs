@@ -15,9 +15,10 @@ namespace ThingsSales.Model
         public double Price { get; set; }
         public DateTime Time { get; set; }
         public DateTime Date { get; set; }
-        public byte[] PhotoData { get; set; } 
-        public string PhotoMimeType { get; set; } 
+        public string City { get; set; }
         public string ApplicationUserId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
+
+        public ICollection<Photo> Photos { get; set; }
     }
 }
