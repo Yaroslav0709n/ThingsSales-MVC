@@ -3,7 +3,7 @@ using ThingsSales.Model;
 
 namespace ThingsSales.Data.Repositories.IRepository
 {
-    public interface IItemRepository
+    public interface IAdvertisementRepository
     {
         Task<Item> AddItemAsync(Item item, List<IFormFile> photos);
         Task<IEnumerable<Item>> GetItemsAsync(string userId);

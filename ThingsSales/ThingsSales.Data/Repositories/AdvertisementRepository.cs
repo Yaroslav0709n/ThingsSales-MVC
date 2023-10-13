@@ -6,11 +6,11 @@ using ThingsSales.Model;
 
 namespace ThingsSales.Data.Repositories
 {
-    public class ItemRepository : IItemRepository
+    public class AdvertisementRepository : IAdvertisementRepository
     {
         private readonly ApplicationDbContext _context;
 
-        public ItemRepository(ApplicationDbContext context)
+        public AdvertisementRepository(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -46,7 +46,12 @@ namespace ThingsSales.Data.Repositories
 
         public async Task<Item> GetItemByIdAsync(int itemId)
         {
-            return await _context.Items.FindAsync(itemId);
+            var photos = await _context.Photos.Where(x => x.ItemId == itemId).ToListAsync();
+
+            var item = await _context.Items.FindAsync(itemId);
+            item.Photos = photos;
+            
+            return item;
         }
     }
 }
