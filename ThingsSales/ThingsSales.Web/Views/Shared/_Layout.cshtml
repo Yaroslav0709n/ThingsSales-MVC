@@ -20,14 +20,16 @@
                 <div class="navbar justify-content-end" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a style="color: white;" class="nav-link" href="/Home/Index">Home</a>
+                            <a style="color: white;" class="nav-link" href="/Home/GetItems">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a style="color: white;" class="nav-link" href="/UserItems/Index">
+                            <a style="color: white;" class="nav-link" href="/Advertisement/GetUserItems">
                                 @Context.Session.GetString("UserFullName")
                             </a>
                         </li>
-                            <a href="/CreateItem/Index" class="btn btn-primary">Add advertisement</a>
+                        <li class="nav-item">
+                            <a href="/Advertisement/CreateItem" class="addBtn btn-primary">Add advertisement</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -39,11 +41,6 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted mt-5">
-        <div class="container">
-            &copy; 2023 - ThingsSales.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

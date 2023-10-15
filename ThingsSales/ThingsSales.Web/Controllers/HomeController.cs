@@ -1,27 +1,24 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ThingsSales.Data.ValidationExtensions;
 using ThingsSales.Service.IService;
+using ThingsSales.Service.Service;
 
 namespace ThingsSales.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IUserService _userService;
+        private readonly IAdvertismentService _itemService;
 
-        public HomeController(IUserService userService)
+        public HomeController(IAdvertismentService itemService)
         {
-            _userService = userService;
+            _itemService = itemService;
         }
 
-        public async Task<IActionResult> Index()
+        [HttpGet]
+        public async Task<ActionResult> GetItems()
         {
-            string userId = HttpContext.Session.GetString("UserId");
+            var items = await _itemService.GetAllItems();
 
-            var user = await _userService.GetUserById(userId);
-
-            user.ThrowIfNull(nameof(user));
-
-            return View(user);
+            return View(items);
         }
 
 

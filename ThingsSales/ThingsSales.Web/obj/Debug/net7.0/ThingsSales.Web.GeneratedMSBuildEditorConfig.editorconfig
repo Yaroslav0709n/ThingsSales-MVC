@@ -24,24 +24,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/vs2/ThingsSales/ThingsSales/ThingsSales.Web/Views/CreateItem/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JlYXRlSXRlbVxJbmRleC5jc2h0bWw=
+[D:/vs2/ThingsSales/ThingsSales/ThingsSales.Web/Views/Home/GetItems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZXRJdGVtcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/vs2/ThingsSales/ThingsSales/ThingsSales.Web/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[D:/vs2/ThingsSales/ThingsSales/ThingsSales.Web/Views/Item/CreateItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxDcmVhdGVJdGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/vs2/ThingsSales/ThingsSales/ThingsSales.Web/Views/Item/GetUserItemById.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxHZXRVc2VySXRlbUJ5SWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/vs2/ThingsSales/ThingsSales/ThingsSales.Web/Views/Item/GetUserItems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxHZXRVc2VySXRlbXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/vs2/ThingsSales/ThingsSales/ThingsSales.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/vs2/ThingsSales/ThingsSales/ThingsSales.Web/Views/Things/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhpbmdzXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/vs2/ThingsSales/ThingsSales/ThingsSales.Web/Views/UserItems/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckl0ZW1zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/vs2/ThingsSales/ThingsSales/ThingsSales.Web/Views/_ViewStart.cshtml]

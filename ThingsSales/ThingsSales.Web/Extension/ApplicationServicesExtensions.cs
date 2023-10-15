@@ -11,7 +11,7 @@ namespace ThingsSales.Web.Extension
         {
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IItemService, ItemService>();
+            services.AddScoped<IAdvertismentService, ItemService>();
             services.AddScoped<IItemRepository, ItemRepository>();
 
             return services;

@@ -13,7 +13,7 @@ namespace ThingsSales.Data.Repositories
             _context = context;
         }
 
-        public async Task<ApplicationUser> GetById(string userId)
+        public async Task<ApplicationUser> GetByIdAsync(string userId)
         {
             return await _context.ApplicationUsers.FindAsync(userId);
         }

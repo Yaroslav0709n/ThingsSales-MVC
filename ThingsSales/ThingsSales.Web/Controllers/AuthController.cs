@@ -81,7 +81,7 @@ namespace ThingsSales.Web.Controllers
                 HttpContext.Session.SetString("UserFullName", $"{user.FirstName} {user.LastName}");
             }
 
-            return RedirectToAction("Index", "Things");
+            return RedirectToAction("GetItems", "Home");
         }
     }
 }

@@ -1,7 +1,5 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Internal;
-using Microsoft.EntityFrameworkCore;
 using ThingsSales.Data.Repositories.IRepository;
 using ThingsSales.Data.ValidationExtensions;
 using ThingsSales.Model;
@@ -10,7 +8,7 @@ using ThingsSales.Service.ViewModels;
 
 namespace ThingsSales.Service.Service
 {
-    public class ItemService : IItemService
+    public class ItemService : IAdvertismentService
     {
         private readonly IMapper _mapper;
         private readonly IItemRepository _itemRepository;
@@ -22,9 +20,18 @@ namespace ThingsSales.Service.Service
             _itemRepository = itemRepository;
         }
 
-        public async Task<IEnumerable<ItemViewModel>> GetAllItems(string userId)
+        public async Task<IEnumerable<ItemViewModel>> GetAllItems()
         {
-            var items = await _itemRepository.GetItemsAsync(userId);
+            var items = await _itemRepository.GetItemsAsync();
+
+            items.ThrowIfNull(nameof(items));
+
+            return _mapper.Map<IEnumerable<ItemViewModel>>(items);
+        }
+
+        public async Task<IEnumerable<ItemViewModel>> GetAllUserItemsById(string userId)
+        {
+            var items = await _itemRepository.GetUserItemsAsync(userId);
 
             items.ThrowIfNull(nameof(items));
 
@@ -37,10 +44,7 @@ namespace ThingsSales.Service.Service
 
             item.ThrowIfNull(nameof(item));
 
-            var itemModel = _mapper.Map<ItemViewModel>(item);
-
-
-            return itemModel;
+            return _mapper.Map<ItemViewModel>(item); ;
         }
 
         public async Task<ItemViewModel> InsertItem(ItemViewModel item, List<IFormFile> photos, string userId)
